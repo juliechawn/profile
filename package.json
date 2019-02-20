@@ -1,0 +1,28 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "aws-appsync": "^1.7.1",
+    "aws-appsync-react": "^1.2.6",
+    "axios": "^0.18.0",
+    "graphql": "^14.1.1",
+    "graphql-tag": "^2.10.1",
+    "react": "^16.4.2",
+    "react-apollo": "^2.4.1",
+    "react-dom": "^16.8.1",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.5",
+    "redux": "^4.0.0",
+    "redux-promise-middleware": "^5.1.1",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

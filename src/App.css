@@ -1,0 +1,554 @@
+html,
+body {
+  font-family: "Open Sans Condensed", sans-serif;
+  color: black;
+  width: 100%;
+}
+
+.section-header {
+  text-align: center;
+  margin-top: 25px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 36px;
+}
+
+.section-anchor {
+  margin: 10px;
+  padding: 10px 0;
+}
+
+.work-description {
+  margin-top: 25px;
+  font-family: "Roboto", serif;
+}
+
+.work-title {
+  font-size: 30px;
+}
+
+.work-subtitle {
+  font-size: 24px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+@media (min-width: 320px) and (max-width: 600px),
+  (min-width: 600px) and (max-width: 999px) {
+  #about {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #about-div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .col {
+    padding: 0px;
+    flex: 1;
+  }
+
+  .julie {
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  a {
+    color: black;
+    padding: 10px;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: black;
+    background-color: rgb(0, 122, 222);
+    filter: invert(100%);
+  }
+
+  .nav-div {
+    margin-top: 20px;
+    font-family: "Roboto", serif;
+    font-size: 20px;
+    float: right;
+    margin-right: 20px;
+    height: 30px;
+  }
+
+  .arrow {
+    margin-bottom: 5px;
+    margin-left: 5px;
+    width: 20px;
+    transform: rotate(270deg);
+  }
+
+  .bio {
+    width: 100%;
+    height: 50%;
+  }
+
+  .bio-div {
+    height: 50%;
+    width: 80%;
+    margin: 50px auto;
+  }
+
+  .name-p {
+    font-size: 40px;
+    font-family: "Roboto", serif;
+  }
+
+  .subtitle-p {
+    font-size: 22px;
+    font-family: "Cormorant Garamond", serif;
+  }
+
+  .about-p {
+    font-size: 16px;
+    color: rgb(82, 82, 82);
+    font-family: "Roboto", sans-serif;
+  }
+
+  .skills-div {
+    text-align: center;
+    padding: 0px 5% 0px 5%;
+    font-size: 22px;
+    font-family: "Cormorant Garamond", serif;
+  }
+
+  .icon {
+    height: 25px;
+    margin: 5px;
+  }
+
+  #work {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .work-nav-div {
+    background: white;
+    margin-top: 20px;
+    font-family: "Roboto", serif;
+    font-size: 24px;
+    float: left;
+    margin-left: 50px;
+    height: 30px;
+  }
+
+  .arrow-work {
+    margin-bottom: 5px;
+    margin-right: 5px;
+    width: 20px;
+    transform: rotate(90deg);
+  }
+
+  .section-header-text {
+    font-family: "Roboto", serif;
+    text-align: center;
+    font-size: 24px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .arrow-visit {
+    margin-bottom: 5px;
+    margin-left: 10px;
+    width: 20px;
+}
+
+
+  #work-portfolio {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .work-portfolio-div {
+    border: 2px solid rgba(0, 24, 104, 0.536);
+    background-color: rgba(0, 24, 104, 0.153);
+    resize: both;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: nowrap;
+    margin: 25px 0;
+    padding: 10px;
+  }
+
+  .t-rex .weather .got {
+    width: 95vw;
+  }
+}
+
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+  #about {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  #about-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .col {
+    padding: 0px;
+  }
+
+  .julie {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  a {
+    color: black;
+    padding: 10px;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: black;
+    background-color: rgb(0, 122, 222);
+    filter: invert(100%);
+  }
+
+  .nav-div {
+    margin-top: 20px;
+    font-family: "Roboto", serif;
+    font-size: 20px;
+    float: right;
+    margin-right: 20px;
+    height: 30px;
+  }
+
+  .arrow {
+    margin-bottom: 5px;
+    margin-left: 5px;
+    width: 20px;
+    transform: rotate(270deg);
+  }
+
+  .bio {
+    height: 100vh;
+    overflow: scroll;
+  }
+
+  .bio-div {
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    width: 80%;
+  }
+
+  .name-p {
+    font-size: 40px;
+    font-family: "Roboto", serif;
+  }
+
+  .subtitle-p {
+    font-size: 22px;
+    font-family: "Cormorant Garamond", serif;
+  }
+
+  .about-p {
+    font-size: 16px;
+    color: rgb(106, 106, 106);
+    font-family: "Roboto", sans-serif;
+  }
+
+  .skills-div {
+    text-align: center;
+    padding: 0px 5% 0px 5%;
+    font-size: 22px;
+    font-family: "Cormorant Garamond", serif;
+  }
+
+  .icon {
+    height: 25px;
+    margin: 5px;
+  }
+
+  #work {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .work-nav-div {
+    background: white;
+    margin-top: 20px;
+    font-family: "Roboto", serif;
+    font-size: 24px;
+    float: left;
+    margin-left: 50px;
+    height: 30px;
+  }
+
+  .arrow-work {
+    margin-bottom: 5px;
+    margin-right: 5px;
+    width: 20px;
+    transform: rotate(90deg);
+  }
+
+  .section-header-text {
+    font-family: "Roboto", serif;
+    text-align: center;
+    font-size: 24px;
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .arrow-visit {
+    margin-bottom: 5px;
+    margin-left: 10px;
+    width: 20px;
+}
+
+  #work-portfolio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+
+  .work-portfolio-div {
+    border: 2px solid rgba(0, 24, 104, 0.536);
+    background-color: rgba(0, 24, 104, 0.153);
+    resize: both;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: center;
+    margin: 25px 0;
+    padding: 10px;
+  }
+
+  .t-rex {
+    width: 35vw;
+  }
+
+  .weather {
+    width: 50vw;
+  }
+
+  .got {
+    width: 90vw;
+  }
+
+}
+
+/*desktop*/
+/*large screens*/
+@media (min-width: 1200px) {
+  #about {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .col {
+    padding: 0px;
+  }
+
+  .julie {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  a {
+    color: black;
+    padding: 10px;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+
+  a:hover {
+    transform: scale(1.1);
+    color: black;
+    background-color: rgb(0, 122, 222);
+    filter: invert(100%);
+  }
+
+  .nav-div {
+    margin-top: 20px;
+    font-family: "Roboto", serif;
+    font-size: 24px;
+    float: right;
+    margin-right: 50px;
+    height: 30px;
+  }
+
+  .arrow {
+    margin-bottom: 5px;
+    margin-left: 5px;
+    width: 24px;
+    transform: rotate(270deg);
+  }
+
+  a:hover {
+    transform: scale(1.5);
+    color: black;
+    background-color: rgb(0, 122, 222);
+    filter: invert(100%);
+  }
+
+  .bio {
+    height: 100vh;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .bio-div {
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    width: 80%;
+  }
+
+  .name-p {
+    font-size: 48px;
+    font-family: "Roboto", serif;
+  }
+
+  .subtitle-p {
+    font-size: 30px;
+    font-family: "Cormorant Garamond", serif;
+  }
+
+  .about-p {
+    font-size: 16px;
+    color: rgb(106, 106, 106);
+    font-family: "Roboto", sans-serif;
+  }
+
+  .skills-div {
+    text-align: center;
+    padding: 0px 5% 0px 5%;
+    font-size: 22px;
+    font-family: "Cormorant Garamond", serif;
+  }
+
+  .icon {
+    height: 25px;
+    margin: 5px;
+  }
+
+  #work {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .work-nav-div {
+    background: white;
+    margin-top: 20px;
+    font-family: "Roboto", serif;
+    font-size: 24px;
+    float: left;
+    margin-left: 50px;
+    height: 30px;
+  }
+
+  .arrow-work {
+    margin-bottom: 5px;
+    margin-right: 5px;
+    width: 24px;
+    transform: rotate(90deg);
+  }
+
+  .section-header-text {
+    font-family: "Roboto", serif;
+    text-align: center;
+    font-size: 24px;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .arrow-visit {
+    margin-bottom: 5px;
+    margin-left: 10px;
+    width: 24px;
+}
+
+  #work-portfolio {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+
+  .work-portfolio-div {
+    border: 2px solid rgba(0, 24, 104, 0.536);
+    background-color: rgba(0, 24, 104, 0.153);
+    resize: both;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 25px 0;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .t-rex {
+    width: 35vw;
+  }
+
+  .weather {
+    width: 50vw;
+  }
+
+  .got {
+    width: 90vw;
+  }
+
+  .work-description {
+    margin-top: 25px;
+  }
+}

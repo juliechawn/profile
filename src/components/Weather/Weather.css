@@ -1,0 +1,18 @@
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.container {
+    background-image: url();
+    padding: 10px;
+    margin: 0px;
+    min-height: 504.25px; 
+}
+
+#stats {
+    padding: 0;
+}
+
+input {
+    padding: 0;
+}
