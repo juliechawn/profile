@@ -4,16 +4,17 @@ import Trex from "./components/Trex/Trex";
 import Weather from "./components/Weather/Weather";
 import Got from "./components/Got/Got";
 import arrow from "./images/arrow.png";
+import { NavLink } from "react-router-dom";
 
 class AppWork extends React.Component {
   render() {
     return (
       <div id="work">
         <nav className="work-nav-div">
-          <a href={`#/`}>
+          <NavLink className="anchor" to="/">
             <img className="arrow-work" src={arrow} alt="arrow" />
             <span className="nav-name">ABOUT</span>
-          </a>
+          </NavLink>
         </nav>
         <div className="section-header">
           <p>Current project</p>
@@ -22,11 +23,17 @@ class AppWork extends React.Component {
           I was commissioned to create a lifestyle web app. I am building with
           React and using flexbox and media queries to create a responsive
           design. The CMS and API are developed with Strapi, MongoDB, and
-          GraphQL. (This app may take a minute to load because it is hosted on Heroku for production.)
-          <p className="section-anchor"><a href="https://lr-site.herokuapp.com/" target="_blank" rel="noopener noreferrer">
-            <span>VISIT SITE</span>
-            <img className="arrow-visit" src={arrow} alt="arrow" />
-          </a>
+          GraphQL. (This app may take a minute to load because it is hosted on
+          Heroku for production.)
+          <p className="section-anchor">
+            <a className="anchor"
+              href="https://lr-site.herokuapp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>VISIT SITE</span>
+              <img className="arrow-visit" src={arrow} alt="arrow" />
+            </a>
           </p>
         </div>
         <div className="section-header">
@@ -41,7 +48,9 @@ class AppWork extends React.Component {
               <Got />
             </div>
             <div className="work-description">
-              <p className="work-title">GAME of THRONES DIGITAL PLAYING CARDS</p>
+              <p className="work-title">
+                GAME of THRONES DIGITAL PLAYING CARDS
+              </p>
               <p className="work-subtitle">
                 Stats of your favorite (or least favorite) characters
               </p>
@@ -50,7 +59,8 @@ class AppWork extends React.Component {
               </p>
               <p>
                 I built this project because I wanted to build my own API and
-                learn GraphQL. The API is built with AWS AppSync and Amazon S3. Click on a card to see the back!
+                learn GraphQL. The API is built with AWS AppSync and Amazon S3.
+                Click on a card to see the back!
               </p>
             </div>
           </div>

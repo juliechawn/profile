@@ -6,6 +6,8 @@ import linkedin from "./images/linkedin.png";
 import github from "./images/github.png";
 import julie2 from "./images/julieforedit2.png";
 import arrow from "./images/arrow.png";
+import { NavLink } from "react-router-dom";
+
 
 class AppHome extends React.Component {
   render() {
@@ -18,10 +20,10 @@ class AppHome extends React.Component {
           <div className="col bio">
             <nav>
               <div className="nav-div">
-              <a href={`#/work`}>
+              <NavLink className="anchor" to="/work">
                 <span className="nav-name">WORK</span>
                 <img className="arrow" src={arrow} alt="arrow" />
-              </a>
+                </NavLink>
               </div>
             </nav>
             <div className="bio-div">
@@ -48,7 +50,7 @@ class AppHome extends React.Component {
                 </p>
               </div>
               <div className="contact-buttons">
-                <a href="mailto:juliechawn@gmail.com?Subject=Hello%20">
+                <a className="anchor" href="mailto:juliechawn@gmail.com?Subject=Hello%20">
                   <img
                     className="icon"
                     src={email}
@@ -56,21 +58,21 @@ class AppHome extends React.Component {
                     alt="email"
                   />
                 </a>
-                <a
+                <a className="anchor"
                   href="https://www.linkedin.com/in/julie-cappa-hawn-07609435/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img className="icon" src={linkedin} alt="linkedin" />
                 </a>
-                <a
+                <a className="anchor"
                   href="https://github.com/juliechawn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img className="icon" src={github} alt="github" />
                 </a>
-                <a href="/files/JulieCHawnResume.pdf" download>
+                <a className="anchor" href="/files/JulieCHawnResume.pdf" download>
                   <img
                     className="icon"
                     src={resume}

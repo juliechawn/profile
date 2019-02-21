@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import AppHome from "./AppHome";
 import AppWork from "./AppWork";
@@ -9,10 +9,12 @@ class App extends React.Component {
     return (
       <div className="App">
         <Router>
-          <div>
-            <Route exact path="/" component={AppHome} />
-            <Route path="/work" component={AppWork} />
-          </div>
+          <React.Fragment>
+            <Switch>
+              <Route exact path="/" component={AppHome} />
+              <Route path="/work" component={AppWork} />
+            </Switch>
+          </React.Fragment>
         </Router>
       </div>
     );
