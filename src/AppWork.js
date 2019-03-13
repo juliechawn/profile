@@ -23,8 +23,7 @@ class AppWork extends React.Component {
           I was commissioned to create a lifestyle web app. I am building with
           React and using flexbox and media queries to create a responsive
           design. The CMS and API are developed with Strapi, MongoDB, and
-          GraphQL. (This app may take a minute to load because it is hosted on
-          Heroku for production.)
+          GraphQL.
           <p className="section-anchor">
             <a className="anchor"
               href="https://lr-site.herokuapp.com/"
