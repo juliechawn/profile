@@ -13,7 +13,8 @@ const defaultState = {
     history: [],
     error: '',
     errorName: '',
-    backgroundImg: ''
+    backgroundImg: '',
+    errorImg: ''
 }
 
 export default function CityReducer(state = defaultState, action) {
@@ -64,7 +65,6 @@ export default function CityReducer(state = defaultState, action) {
         }
         case 'SEARCH_IMG_FULFILLED': {
             const { cityImg } = action.payload;
-            console.log('click')
             return {
                 ...state,
                 backgroundImg: cityImg
@@ -80,7 +80,8 @@ export default function CityReducer(state = defaultState, action) {
         case 'SEARCH_IMG_REJECTED': {
             return {
                 ...state,
-                backgroundImg: ''
+                backgroundImg: 'https://images.unsplash.com/photo-1526590916886-c918f193794d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjM3Mzg5fQ',
+                errorImg: ''
             }
         }
 
