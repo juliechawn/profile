@@ -12,8 +12,8 @@ const defaultState = {
     icon: '01d',
     history: [],
     error: '',
-    errorName: ''
-    
+    errorName: '',
+    backgroundImg: ''
 }
 
 export default function CityReducer(state = defaultState, action) {
@@ -28,7 +28,6 @@ export default function CityReducer(state = defaultState, action) {
         }
 
         case 'SEARCH_CITY_FULFILLED': {
-            
             const { cityData } = action.payload;
             return {
                 ...state,
@@ -61,6 +60,27 @@ export default function CityReducer(state = defaultState, action) {
                 searchName: '',
                 errorName: '',
                 error: 'Hmm, can not find weather for that city'
+            }
+        }
+        case 'SEARCH_IMG_FULFILLED': {
+            const { cityImg } = action.payload;
+            console.log('click')
+            return {
+                ...state,
+                backgroundImg: cityImg
+            };
+        }
+
+        case 'SEARCH_IMG_PENDING': {
+            return {
+                ...state,
+                backgroundImg: ''      
+            }
+        }
+        case 'SEARCH_IMG_REJECTED': {
+            return {
+                ...state,
+                backgroundImg: ''
             }
         }
 

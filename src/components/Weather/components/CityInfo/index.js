@@ -12,7 +12,7 @@ function mapStoreToProps(store) {
     cityHightemp: store.city.hightemp,
     cityLowtemp: store.city.lowtemp,
     cityWindspeed: store.city.windspeed,
-    cityIcon: store.city.icon
+    cityIcon: store.city.icon,
   };
 }
 

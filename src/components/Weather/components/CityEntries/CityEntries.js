@@ -5,6 +5,7 @@ import React from 'react';
 import {
   updateCity,
   searchCity,
+  searchImg
 } from './cityActions';
 
 export default class cityEntries extends React.Component {
@@ -25,7 +26,8 @@ export default class cityEntries extends React.Component {
   handleCitySearch(event) {
     event.preventDefault();
     const { dispatch, searchName } = this.props;
-    dispatch(searchCity(searchName));
+    dispatch(searchCity(searchName))
+    dispatch(searchImg(searchName));
   }
 
   handleButton(event) {
@@ -33,6 +35,7 @@ export default class cityEntries extends React.Component {
     const { dispatch } = this.props
     const searchName = event.target.value
     dispatch(searchCity(searchName))
+    dispatch(searchImg(searchName))
   }
 
   componentDidMount() {
@@ -41,6 +44,7 @@ export default class cityEntries extends React.Component {
     .then((res) => {
       let searchName = res.data.name
       dispatch(searchCity(searchName))
+      dispatch(searchImg(searchName))
     })
   }
 

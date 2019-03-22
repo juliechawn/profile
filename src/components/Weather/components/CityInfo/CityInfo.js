@@ -3,7 +3,7 @@ import React from 'react';
 export default class CityInfo extends React.Component {
 
   render() {
-    const { cityName, cityLat, cityLong, cityTemp, cityHumidity, cityPressure, cityHightemp, cityLowtemp, cityWindspeed, cityIcon } = this.props;
+    const { cityName, cityLat, cityLong, cityTemp, cityHumidity, cityPressure, cityHightemp, cityLowtemp, cityWindspeed, cityIcon, cityBackground} = this.props;
     return (
       <div className='card'>
         <div className='card-header bg-primary text-white'>City Information</div>

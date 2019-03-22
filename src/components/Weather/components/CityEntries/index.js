@@ -7,7 +7,8 @@ function mapStoreToProps(store) {
         cityData: store.city.cityData,
         history: store.city.history,
         error: store.city.error,
-        errorName: store.city.errorName
+        errorName: store.city.errorName,
+        backgroundImg: store.city.backgroundImg     
     };
 };
 
