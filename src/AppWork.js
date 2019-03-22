@@ -25,7 +25,8 @@ class AppWork extends React.Component {
           design. The CMS and API are developed with Strapi, MongoDB, and
           GraphQL.
           <p className="section-anchor">
-            <a className="anchor"
+            <a
+              className="anchor"
               href="https://lr-site.herokuapp.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -98,7 +99,9 @@ class AppWork extends React.Component {
               <p>
                 The Weather App is a straight forward BootStrap design, which is
                 great way to learn responsive layout. This is one of the first
-                projects where I utilized the “magic” of React Redux.
+                projects where I utilized the “magic” of React Redux. The two
+                APIs I used are Unsplash for the city image and OpenWeatherMap
+                for the weather.
               </p>
             </div>
           </div>
