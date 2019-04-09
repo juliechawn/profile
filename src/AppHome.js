@@ -72,7 +72,7 @@ class AppHome extends React.Component {
                 >
                   <img className="icon" src={github} alt="github" />
                 </a>
-                <a className="anchor" href="/files/JulieCHawnResume.pdf" download>
+                <a className="anchor" href="/files/JulieHawnResume.pdf" download>
                   <img
                     className="icon"
                     src={resume}

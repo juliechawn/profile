@@ -37,7 +37,7 @@ function formatTime(time) {
 }
 
 export default class SearchHistory extends React.Component {
-
+ 
   render() {
     const { historyNames } = this.props;
     const date = new Date();
@@ -50,6 +50,9 @@ export default class SearchHistory extends React.Component {
             <tbody>
               {historyNames.map((historyName, index) => (
                 <tr key={index}>
+                {/* <th className="row ml-1 p-0"><i
+                    className="fas fa-times fa-sm"
+                  /></th> */}
                   <td>
                     {historyName.name}
                     <br />
@@ -57,7 +60,7 @@ export default class SearchHistory extends React.Component {
                       {formatDate(date)}
                       <span>
                         {" "}
-                        <b>@</b>{" "}
+                        <b>@</b>
                       </span>
                       {formatTime(time)}
                     </small>

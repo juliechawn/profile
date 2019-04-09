@@ -1,0 +1,27 @@
+.vstda-background {
+  padding: 25px;
+  background: #136a8a; 
+  background: -webkit-linear-gradient(to left, #b3e6eb, #6281c9);
+  background: linear-gradient(to left, #b3e6eb, #6281c9);
+}
+
+.vstda-container {
+  padding: 10px;
+}
+
+.vstda-strike-through {
+  text-decoration: line-through;
+}
+
+.vstda-textarea {
+  width: 100%;
+  max-width: 100%;
+  min-height: 8em;
+  max-height: 16em;
+}
+
+
+input[type=checkbox]:checked + span {
+  text-decoration: line-through;
+  margin-right: 1em;
+}

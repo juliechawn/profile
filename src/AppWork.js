@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import Trex from "./components/Trex/Trex";
 import Weather from "./components/Weather/Weather";
+import Vstda from "./components/Vstda/Vstda";
 import Got from "./components/Got/Got";
 import arrow from "./images/arrow.png";
 import { NavLink } from "react-router-dom";
@@ -97,11 +98,28 @@ class AppWork extends React.Component {
                 JavaScript • React/Redux • Node.js • CSS • BootStrap
               </p>
               <p>
-                The Weather App is a straight forward BootStrap design, which is
+                The Weather App is a BootStrap design, which is
                 great way to learn responsive layout. This is one of the first
                 projects where I utilized the “magic” of React Redux. The two
                 APIs I used are Unsplash for the city image and OpenWeatherMap
                 for the weather.
+              </p>
+            </div>
+          </div>
+          <div className="work-portfolio-div weather">
+            <div className="project">
+              <Vstda />
+            </div>
+            <div className="work-description">
+              <p className="work-title">Very Simple To Do App</p>
+              <p className="work-subtitle">
+                Track all the things
+              </p>
+              <p className="work-p">
+                JavaScript • React • Node.js • BootStrap • CSS
+              </p>
+              <p>
+                VSTDA is the first app I built with ReactJS and incorporates fundamental React concepts including updating state and passing props between components. 
               </p>
             </div>
           </div>

@@ -28,7 +28,7 @@ export function searchImg(name) {
         return { cityImg };
       })
       .catch(error => {
-        let err = 'https://images.unsplash.com/photo-1526590916886-c918f193794d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjM3Mzg5fQ'
+        // let err = 'https://images.unsplash.com/photo-1526590916886-c918f193794d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjM3Mzg5fQ'
         return{ error};
       })
   };
