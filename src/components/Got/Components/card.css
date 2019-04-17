@@ -59,7 +59,7 @@
 }
 
 .char-bio {
-  font-size: 12px;
+  font-size: 10px;
   display: flex;
   flex-flow: column;
   margin-left: 5px;
@@ -72,18 +72,28 @@
 }
 
 table {
-  /* background: rgb(225, 225, 225, 0.8); */
-}
-table,
-th,
-td {
-  /* border: 1px solid grey; */
+  table-layout: fixed;
+  width: 100% ;
   border-collapse: collapse;
 }
 
+tr th {
+  padding-top: 7.5px;
+}
+th,
+td {
+  vertical-align: top;
+  border-spacing: 5em;
+  width: 25%;
+}
+
 .char-quote {
-  height: 75%;
-  font-size: 16px;
+  padding: 0 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 14px;
   color: white;
 }
 
@@ -94,7 +104,8 @@ td {
 }
 
 .stark-b {
-  background: linear-gradient(#d4cdb1 75%, #7b906f 25%);
+  background: url("./images/stark.png") center no-repeat, linear-gradient(#d4cdb1 75%, #7b906f 25%);
+  background-size: contain;
 }
 
 .targaryen-f {
@@ -104,7 +115,8 @@ td {
 }
 
 .targaryen-b {
-  background: linear-gradient(#A9181F 75%, black 25%);
+  background: url("./images/targaryen.png") center no-repeat, linear-gradient(#A9181F 75%, black 25%);
+  background-size: contain;
 }
 
 .lannister-f {
@@ -114,5 +126,6 @@ td {
 }
 
 .lannister-b {
-  background: linear-gradient(#C2AD78 75%, #87090A 25%);
+  background: url("./images/lannister.png") center no-repeat, linear-gradient(#C2AD78 75%, #87090A 25%);
+  background-size: contain;
 }
