@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./card.css";
 
 import Card from "./Card";
+import NewCard from "./NewCard";
 
 import { graphql, compose, withApollo } from "react-apollo";
 import QueryAllCharacters from "../GraphQL/QueryAllCharacters";
@@ -14,6 +15,7 @@ class AllCharacters extends Component {
         <header className="got-header">
           <p>GAME OF THRONES</p>
         </header>
+        <NewCard />
         <div className="card-container">
           {this.props.cards.map((card, i) => (
             <Card 

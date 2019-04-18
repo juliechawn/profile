@@ -19,6 +19,8 @@ class Card extends Component {
         return "targaryen-f";
       case "Lannister":
         return "lannister-f";
+      case "Greyjoy":
+        return "greyjoy-f";
       default:
     }
   }
@@ -31,6 +33,8 @@ class Card extends Component {
         return "targaryen-b";
       case "Lannister":
         return "lannister-b";
+        case "Greyjoy":
+        return "greyjoy-b";
       default:
     }
   }
