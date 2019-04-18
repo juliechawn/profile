@@ -61,8 +61,8 @@ class Card extends Component {
         onClick={() => this.setState({ toggle: !this.state.toggle })}
       >
         <div className="char-title">
-          <div className="title">{this.props.name}</div>
-          {/* <span>{this.props.status}</span> */}
+          <div className="title">{this.props.name} <span className="spouse-status">{this.props.status}</span></div>
+         
           <div className="nickname"><strong>{this.props.nickname}</strong></div>
         </div>
         <div className="char-bio">

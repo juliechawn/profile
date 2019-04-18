@@ -56,12 +56,11 @@ class AppWork extends React.Component {
                 Stats of your favorite (or least favorite) characters
               </p>
               <p className="work-p">
-                JavaScript • React • Node.js • GraphQL • AWS • CSS • BootStrap
+                JavaScript • React • Node.js • GraphQL • AWS • CSS
               </p>
               <p>
                 I built this project because I wanted to build my own API and
                 learn GraphQL. The API is built with AWS AppSync and Amazon S3.
-                Click on a card to see the back!
               </p>
             </div>
           </div>

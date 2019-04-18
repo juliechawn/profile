@@ -4,6 +4,10 @@
   color: white;
 }
 
+.got-subheader {
+  font-size: 24px;
+}
+
 .card-preview {
   display: flex;
   flex-direction: row;

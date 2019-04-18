@@ -13,7 +13,8 @@ class AllCharacters extends Component {
     return (
       <div>
         <header className="got-header">
-          <p>GAME OF THRONES</p>
+          <p>GAME OF THRONES PLAYING CARDS</p>
+          <p className="got-subheader">Click on a card to see the back!</p>
         </header>
         <NewCard />
         <div className="card-container">
