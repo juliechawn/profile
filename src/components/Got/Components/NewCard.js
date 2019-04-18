@@ -29,7 +29,7 @@ class NewCard extends Component {
     return (
       <div>
         <form className="form">
-          <div className="form-row">
+          {/* <div className="form-row">
             <label for="validationCustom01">NAME</label>
             <div className="col-md-4">
               <input
@@ -38,7 +38,7 @@ class NewCard extends Component {
                 placeholder="Jon Snow"
               />
             </div>
-          </div>
+          </div> */}
         </form>
       </div>
     );
