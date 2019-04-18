@@ -29,16 +29,6 @@ class NewCard extends Component {
     return (
       <div>
         <form className="form">
-          {/* <div className="form-row">
-            <label for="validationCustom01">NAME</label>
-            <div className="col-md-4">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Jon Snow"
-              />
-            </div>
-          </div> */}
         </form>
       </div>
     );
