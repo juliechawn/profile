@@ -18,7 +18,8 @@ export function searchCity(name) {
   };
 }
 export function searchImg(name) {
-  const url2 = `https://api.unsplash.com/search/photos/?page=1&per_page=10&orientation=landscape&query=${name}&client_id=5b6c80594c0633a69ead9499a7bae3248a6fb73406a95ad97a3f20b6f457579f`;
+  const url2 = `https://api.unsplash.com/search/photos/?page=1&per_page=10&orientation=landscape&query=${name}&client_id=',
+  WEATHER_IMG : '5b6c80594c0633a69ead9499a7bae3248a6fb73406a95ad97a3f20b6f457579f`;
   return {
     type: "SEARCH_IMG",
     payload: axios
