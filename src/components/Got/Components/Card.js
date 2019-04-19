@@ -85,7 +85,7 @@ class Card extends Component {
             </tbody>
             <thead>
               <tr>
-                <th>SPOUSE</th>
+                <th>SPOUSE/LOVER</th>
                 <th>BEST FRIEND</th>
                 <th>PET</th>
                 <th>WEAPON</th>

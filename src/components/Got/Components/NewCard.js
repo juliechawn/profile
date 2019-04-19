@@ -3,8 +3,8 @@ import "./card.css";
 
 class NewCard extends Component {
   static defaultProps = {
-    createCard: () => null,
-}
+    createCard: () => null
+  };
   state = {
     card: {
       image: "",
@@ -16,7 +16,7 @@ class NewCard extends Component {
       pet: "",
       spouse: "",
       spousestatus: "",
-      age: 0,
+      age: "",
       birthplace: "",
       bestfriend: "",
       quote: "",
@@ -26,15 +26,20 @@ class NewCard extends Component {
     }
   };
 
-  handleChange(field, { target: { value } }) {
+  handleChange(
+    field,
+    {
+      target: { value }
+    }
+  ) {
     const { card } = this.state;
 
     card[field] = value;
 
     this.setState({ card });
-}
+  }
 
-  handleSave = async (e) => {
+  handleSave = async e => {
     e.stopPropagation();
     e.preventDefault();
 
@@ -42,7 +47,7 @@ class NewCard extends Component {
     const { card } = this.state;
 
     await createCard({ ...card });
-}
+  };
 
   getHouseF() {
     switch (this.props.house) {
@@ -70,93 +75,77 @@ class NewCard extends Component {
   render() {
     const { card } = this.state;
     return (
-      <div>
-        {/* <form className="form">
-          <table className="form-table">
-            <thead>
-              <tr>
-                <th>NAME</th>
-                <th>TITLE / NICKNAME</th>
-                <th>HOUSE</th>
-                <th>ALLEGIANCE</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <input className="card-input" value={card.name} onChange={this.handleChange.bind(this, 'name')}/>
-                </td>
-                <td>
-                  <input className="card-input" value={card.nickname} onChange={this.handleChange.bind(this, 'nickname')}/>
-                </td>
-                <td>
-                  <select className="card-select" value={card.house} onChange={this.handleChange.bind(this, 'house')}>
-                    <option value="Greyjoy">Greyjoy</option>
-                    <option value="Lannister">Lannister</option>
-                    <option value="Stark">Stark</option>
-                    <option value="Targaryen">Targaryen</option>
-                  </select>
-                </td>
-                <td>
-                <select className="card-select" value={card.allegiance} onChange={this.handleChange.bind(this, 'allegiance')}>
+      <div className="new-card">
+        {/* <p className="card-fields">
+          <span>NAME</span>
+          <input
+            className="card-input"
+            placeholder="Oprah Winfrey"
+            value={card.name}
+            onChange={this.handleChange.bind(this, "name")}
+          />
+        </p>
+        <p className="card-fields"> 
+          <span >TITLE / NICKNAME</span>
+          <input
+            placeholder="Lady O"
+            className="card-input"
+            value={card.nickname}
+            onChange={this.handleChange.bind(this, "nickname")}
+          />
+        </p>
+        <p className="card-fields">
+          <span>HOUSE</span>
+          <select
+            className="card-select"
+            value={card.house}
+            onChange={this.handleChange.bind(this, "house")}
+          >
+          <option hidden>PICK A HOUSE</option>
+            <option value="Greyjoy">Greyjoy</option>
+            <option value="Lannister">Lannister</option>
+            <option value="Stark">Stark</option>
+            <option value="Targaryen">Targaryen</option>
+          </select>
+        </p>
+        <p className="card-fields">
+          <span>ALLEGIANCE</span>
+          <select className="card-select" value={card.allegiance} onChange={this.handleChange.bind(this, 'allegiance')}>
+          <option hidden>PICK A HOUSE</option>
                     <option>Greyjoy</option>
                     <option>Lannister</option>
                     <option>Stark</option>
                     <option>Targaryen</option>
                   </select>
-                </td>
-              </tr>
-            </tbody>
-            <thead>
-              <tr>
-                <th>BIRTHPLACE</th>
-                <th>AGE</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr> 
-                <td>
-                  <input className="card-input" value={card.birthplace} onChange={this.handleChange.bind(this, 'birthplace')}/>
-                </td>
-                <td>
-                  <input className="card-input" value={card.age} onChange={this.handleChange.bind(this, 'age')}/>
-                </td>
-              </tr>
-            </tbody>
-            <thead>
-              <tr>
-                <th>SPOUSE</th>
-                <th>BEST FRIEND</th>
-                <th>PET</th>
-                <th>WEAPON</th>
-                <th>QUOTE</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-               
-                  <span>
-                    <input className="card-input" value={card.spouse} onChange={this.handleChange.bind(this, 'spouse')}/>
-                  </span>
-                </td>
-                <td>
-                  <input className="card-input" value={card.bestfriend} onChange={this.handleChange.bind(this, 'bestfriend')} />
-                </td>
-                <td>
-                  <input className="card-input" value={card.pet} onChange={this.handleChange.bind(this, 'pet')}/>
-                </td>
-                <td>
-                  <input className="card-input" value={card.weapon} onChange={this.handleChange.bind(this, 'weapon')}/>
-                </td>
-                <td>
-                  <input className="quote-input " value={card.quote} onChange={this.handleChange.bind(this, 'quote')}/>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <button onClick={this.handleSave}>Save!</button>
-        </form> */}
+        </p>
+        <p className="card-fields">
+          <span>BIRTHPLACE</span>
+          <input className="card-input" placeholder="Kosciusko, MS" value={card.birthplace} onChange={this.handleChange.bind(this, 'birthplace')}/>
+        </p>
+        <p className="card-fields">
+          <span>AGE</span>
+          <input placeholder="65" type="number" className="card-input" value={card.age} onChange={this.handleChange.bind(this, 'age')}/>
+        </p>
+        <p className="card-fields">
+          <span>SPOUSE / LOVER</span>
+          <input className="card-input" placeholder="Stedman Graham" value={card.spouse} onChange={this.handleChange.bind(this, 'spouse')}/>
+        </p>
+        <p  className="card-fields">
+          <span>BEST FRIEND</span>
+          <input className="card-input" placeholder="Gayle King" value={card.bestfriend} onChange={this.handleChange.bind(this, 'bestfriend')} />
+        </p>
+        <p className="card-fields">
+          <span>PET</span>
+          <input className="card-input" placeholder="Luke and Layla" value={card.pet} onChange={this.handleChange.bind(this, 'pet')}/>
+        </p>
+        <p className="card-fields">
+          <span>WEAPON</span>
+          <input className="card-input" placeholder="her words" value={card.weapon} onChange={this.handleChange.bind(this, 'weapon')}/>
+        </p>
+        <p className="card-fields">
+          <span>QUOTE</span>
+          <textarea className="quote-input" placeholder="Turn your wounds into wisdom." value={card.quote} onChange={this.handleChange.bind(this, 'quote')}/>
+        </p> */}
       </div>
     );
   }

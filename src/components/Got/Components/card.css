@@ -8,47 +8,49 @@
   font-size: 24px;
 }
 
-.card-preview {
-  display: flex;
+.new-card {
+  /* display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  color: white;
+  font-size: 12px;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
+  width: 90%;
+  border: 1px solid white;
+  padding: 25px; */
 }
 
-.form {
-  color: white;
+.card-fields {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-.form-table {
- font-size: 12px;
- 
-}
-
-/* .form-table tr th {
-  padding-top: 7.5px;
-}
-.form-table th,
-td {
-  vertical-align: top;
-  border-spacing: 5em;
-  width: 25%;
-} */
 
 .card-input {
   color: white;
   background: rgb(101, 101, 101);
-  /* border-radius: 10px; */
-  border: none;
-  width: 150px;
-  height: 30px;
-}
-
-.quote-input {
-  background-color: rgb(101, 101, 101);
   border-radius: 10px;
   border: none;
   width: 150px;
-  height: 100px;
+  height: 30px;
+  padding: 10px;
+}
+
+.quote-input {
+  color: white;
+  background: rgb(101, 101, 101);
+  border-radius: 10px;
+  border: none;
+  height: 60px;
+  width: 150px;
+  padding: 10px;
+}
+
+.card-input::placeholder, .quote-input::placeholder {
+  color: rgb(186, 185, 185);
 }
 
 .card-select {
