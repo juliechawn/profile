@@ -6,6 +6,7 @@ import NewCard from "./NewCard";
 
 import { graphql, compose, withApollo } from "react-apollo";
 import QueryAllCharacters from "../GraphQL/QueryAllCharacters";
+import MutationCreateCard from "../GraphQL/MutationCreateCard";
 
 class AllCharacters extends Component {
 
@@ -16,6 +17,7 @@ class AllCharacters extends Component {
           <p>GAME OF THRONES PLAYING CARDS</p>
           <p className="got-subheader">Click on a card to see the back!</p>
         </header>
+        
         <NewCard />
         <div className="card-container">
           {this.props.cards.map((card, i) => (
@@ -47,6 +49,11 @@ class AllCharacters extends Component {
 
 export default withApollo(
   compose(
+    graphql(
+      MutationCreateCard, {
+
+      }
+    ),
     graphql(QueryAllCharacters, {
       options: {
         fetchPolicy: "cache-and-network"

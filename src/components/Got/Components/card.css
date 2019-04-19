@@ -1,5 +1,5 @@
 .got-header {
-  font-family: 'Cinzel', serif;
+  font-family: "Cinzel", serif;
   font-size: 36px;
   color: white;
 }
@@ -16,17 +16,48 @@
 }
 
 .form {
-  display: flex;
-  flex-direction: row;
-  color: white; 
+  color: white;
 }
 
+/* .form-table {
+  table-layout: fixed;
+  width: 70%;
+  border-collapse: collapse;
+} */
+
+/* .form-table tr th {
+  padding-top: 7.5px;
+}
+.form-table th,
+td {
+  vertical-align: top;
+  border-spacing: 5em;
+  width: 25%;
+} */
+
 .card-input {
+  color: white;
+  background: grey;
+  /* border-radius: 10px; */
+  border: none;
+  width: 150px;
+  height: 30px;
+}
+
+.quote-input {
+  background: grey;
   border-radius: 10px;
-    border: none;
-    padding: 20px; 
-    width: 200px;
-    height: 10px;   
+  border: none;
+  width: 150px;
+  height: 100px;
+}
+
+.card-select {
+  border-radius: 10px;
+  border: none;
+  background: white;
+  width: 200px;
+  height: 30px;
 }
 
 .card-container {
@@ -90,23 +121,22 @@
   margin-left: 5px;
   margin-right: 5px;
   color: black;
-  
 }
 
 .spouse-status {
   font-size: 8px;
 }
 
-table {
+.bio-table {
   table-layout: fixed;
-  width: 100% ;
+  width: 100%;
   border-collapse: collapse;
 }
 
-tr th {
+.bio-table tr th {
   padding-top: 7.5px;
 }
-th,
+.bio-table th,
 td {
   vertical-align: top;
   border-spacing: 5em;
@@ -130,39 +160,43 @@ td {
 }
 
 .stark-b {
-  background: url("./images/stark.png") center no-repeat, linear-gradient(#d4cdb1 75%, #7b906f 25%);
+  background: url("./images/stark.png") center no-repeat,
+    linear-gradient(#d4cdb1 75%, #7b906f 25%);
   background-size: contain;
 }
 
 .targaryen-f {
-  background: #A9181F;
+  background: #a9181f;
   border-top: solid black 10px;
   border-left: solid black 10px;
 }
 
 .targaryen-b {
-  background: url("./images/targaryen.png") center no-repeat, linear-gradient(#A9181F 75%, black 25%);
+  background: url("./images/targaryen.png") center no-repeat,
+    linear-gradient(#a9181f 75%, black 25%);
   background-size: contain;
 }
 
 .lannister-f {
-  background: #C2AD78;
-  border-top: solid #87090A 10px;
-  border-left: solid #87090A 10px;
+  background: #c2ad78;
+  border-top: solid #87090a 10px;
+  border-left: solid #87090a 10px;
 }
 
 .lannister-b {
-  background: url("./images/lannister.png") center no-repeat, linear-gradient(#C2AD78 75%, #87090A 25%);
+  background: url("./images/lannister.png") center no-repeat,
+    linear-gradient(#c2ad78 75%, #87090a 25%);
   background-size: contain;
 }
 
 .greyjoy-f {
-  background: #B49022;
+  background: #b49022;
   border-top: solid black 10px;
   border-left: solid black 10px;
 }
 
 .greyjoy-b {
-  background: url("./images/greyjoy.png") center no-repeat, linear-gradient(#B49022 75%, black 25%);
+  background: url("./images/greyjoy.png") center no-repeat,
+    linear-gradient(#b49022 75%, black 25%);
   background-size: contain;
 }

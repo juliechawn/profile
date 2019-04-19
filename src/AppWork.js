@@ -24,7 +24,14 @@ class AppWork extends React.Component {
           I was commissioned to create a lifestyle web app. I am building with
           React and using flexbox and media queries to create a responsive
           design. The CMS and API are developed with Strapi, MongoDB, and
-          GraphQL.
+          GraphQL.{" "}
+          <a
+            href="https://github.com/juliechawn/LRsite"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            https://github.com/juliechawn/LRsite
+          </a>
           <p className="section-anchor">
             <a
               className="anchor"
@@ -57,6 +64,16 @@ class AppWork extends React.Component {
               </p>
               <p className="work-p">
                 JavaScript • React • Node.js • GraphQL • AWS • CSS
+              </p>
+              <p>
+                {" "}
+                <a
+                  href="https://github.com/juliechawn/gotCards"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  https://github.com/juliechawn/gotCards
+                </a>
               </p>
               <p>
                 I built this project because I wanted to build my own API and
@@ -97,11 +114,10 @@ class AppWork extends React.Component {
                 JavaScript • React/Redux • Node.js • CSS • BootStrap
               </p>
               <p>
-                The Weather App is a BootStrap design, which is
-                great way to learn responsive layout. This is one of the first
-                projects where I utilized the “magic” of React Redux. The two
-                APIs I used are Unsplash for the city image and OpenWeatherMap
-                for the weather.
+                The Weather App is a BootStrap design, which is great way to
+                learn responsive layout. This is one of the first projects where
+                I utilized the “magic” of React Redux. The two APIs I used are
+                Unsplash for the city image and OpenWeatherMap for the weather.
               </p>
             </div>
           </div>
@@ -111,14 +127,14 @@ class AppWork extends React.Component {
             </div>
             <div className="work-description">
               <p className="work-title">Very Simple To Do App</p>
-              <p className="work-subtitle">
-                Track all the things
-              </p>
+              <p className="work-subtitle">Track all the things</p>
               <p className="work-p">
                 JavaScript • React • Node.js • BootStrap • CSS
               </p>
               <p>
-                VSTDA is the first app I built with ReactJS and incorporates fundamental React concepts including updating state and passing props between components. 
+                VSTDA is the first app I built with ReactJS and incorporates
+                fundamental React concepts including updating state and passing
+                props between components.
               </p>
             </div>
           </div>
