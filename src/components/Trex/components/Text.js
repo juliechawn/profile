@@ -28,7 +28,7 @@ class Text extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const url = `https://words.bighugelabs.com/api/2/${API_WORD}/` + this.state.word + "/json";
+    const url = "https://words.bighugelabs.com/api/2/ae20e1ed4d471a357983df53d1e40ad2/" + this.state.word + "/json";
 
     axios.get(url)
       .then((response) => {
