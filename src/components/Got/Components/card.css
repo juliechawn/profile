@@ -19,11 +19,10 @@
   color: white;
 }
 
-/* .form-table {
-  table-layout: fixed;
-  width: 70%;
-  border-collapse: collapse;
-} */
+.form-table {
+ font-size: 12px;
+ 
+}
 
 /* .form-table tr th {
   padding-top: 7.5px;
@@ -37,7 +36,7 @@ td {
 
 .card-input {
   color: white;
-  background: grey;
+  background: rgb(101, 101, 101);
   /* border-radius: 10px; */
   border: none;
   width: 150px;
@@ -45,7 +44,7 @@ td {
 }
 
 .quote-input {
-  background: grey;
+  background-color: rgb(101, 101, 101);
   border-radius: 10px;
   border: none;
   width: 150px;
@@ -53,10 +52,11 @@ td {
 }
 
 .card-select {
-  border-radius: 10px;
+  background: rgb(101, 101, 101) !important;
+  color: white;
   border: none;
   background: white;
-  width: 200px;
+  width: 150px;
   height: 30px;
 }
 

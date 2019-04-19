@@ -71,7 +71,7 @@ class NewCard extends Component {
     const { card } = this.state;
     return (
       <div>
-        <form className="form">
+        {/* <form className="form">
           <table className="form-table">
             <thead>
               <tr>
@@ -156,7 +156,7 @@ class NewCard extends Component {
             </tbody>
           </table>
           <button onClick={this.handleSave}>Save!</button>
-        </form>
+        </form> */}
       </div>
     );
   }
