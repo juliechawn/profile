@@ -6,6 +6,10 @@ import QueryAllCharacters from "../GraphQL/QueryAllCharacters";
 import { v4 as uuid } from "uuid";
 import aws from "aws-sdk";
 
+// const AWS_ACCESS_KEY_ID =`${process.env.REACT_APP_AWS_ACCESS_KEY_ID}`
+// const S3_KEY =`${process.env.REACT_APP_S3_KEY}`
+// const AWS_SECRET_ACCESS_KEY =`${process.env.REACT_APP_AWS_SECRET_ACCESS_KEY}`
+
 class NewCard extends Component {
   constructor() {
     super();
@@ -36,7 +40,7 @@ class NewCard extends Component {
   handleFile(e) {
     let file = e.target.files[0];
     var params = {
-      Bucket:  process.env.S3_BUCKET,
+      Bucket: "got-20181210143420-deployment",
       Key: file.name,
       Body: file,
       Expires: 60,
@@ -45,10 +49,10 @@ class NewCard extends Component {
     };
 
     const s3 = new aws.S3({
-      credentials: {
-        accessKeyId: process.env.S3_KEY,
-        secretAccessKey: process.env.S3_SECRET
-      }
+      // credentials: {
+      //   accessKeyId: AWS_ACCESS_KEY_ID,
+      //   secretAccessKey: AWS_SECRET_ACCESS_KEY
+      // }
     });
     s3.putObject(params, (err, signedUrl) => {
       if (signedUrl) {
