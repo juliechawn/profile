@@ -8,7 +8,7 @@ import aws from "aws-sdk";
 
 
 const AWS_ACCESS_KEY_ID = `${process.env.AWS_ACCESS_KEY_ID}`
-// const S3_BUCKET =`${process.env.S3_KEY}`
+const S3_BUCKET =`${process.env.S3_KEY}`
 const AWS_SECRET_ACCESS_KEY = `${process.env.AWS_SECRET_ACCESS_KEY}`
 
 class NewCard extends Component {
