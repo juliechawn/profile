@@ -1,6 +1,6 @@
 
-//  const API_KEY =`${process.env.REACT_APP_AWS_KEY}`
-//  const API_WEB =`${process.env.REACT_APP_AWS_WEB}`
+//  const API_KEY =`${env.REACT_APP_AWS_KEY}`
+//  const API_WEB =`${env.REACT_APP_AWS_WEB}`
 
 const awsmobile =  {
     "aws_appsync_graphqlEndpoint": 'https://khdos6rd4rbcdhlu7lfgzeak5y.appsync-api.us-east-2.amazonaws.com/graphql',

@@ -7,9 +7,9 @@ import { v4 as uuid } from "uuid";
 import aws from "aws-sdk";
 
 
-const AWS_ACCESS_KEY_ID = `${process.env.AWS_ACCESS_KEY_ID}`
+const AWS_ACCESS_KEY_ID = `${env.AWS_ACCESS_KEY_ID}`
 // const S3_BUCKET =`${process.env.S3_KEY}`
-const AWS_SECRET_ACCESS_KEY = `${process.env.AWS_SECRET_ACCESS_KEY}`
+const AWS_SECRET_ACCESS_KEY = `${env.AWS_SECRET_ACCESS_KEY}`
 
 class NewCard extends Component {
   constructor() {
