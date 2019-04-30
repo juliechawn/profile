@@ -36,7 +36,7 @@ class NewCard extends Component {
   handleFile(e) {
     let file = e.target.files[0];
     var params = {
-      Bucket: S3_BUCKET,
+      Bucket:  process.env.S3_BUCKET,
       Key: file.name,
       Body: file,
       Expires: 60,
@@ -46,8 +46,8 @@ class NewCard extends Component {
 
     const s3 = new aws.S3({
       credentials: {
-        accessKeyId: AWS_ACCESS_KEY_ID,
-        secretAccessKey: AWS_SECRET_ACCESS_KEY
+        accessKeyId: process.env.S3_KEY,
+        secretAccessKey: process.env.S3_SECRET
       }
     });
     s3.putObject(params, (err, signedUrl) => {
@@ -68,7 +68,6 @@ class NewCard extends Component {
 
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
-    console.log(this.state)
   }
 
   handleSubmit(e) {
