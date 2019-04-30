@@ -40,6 +40,10 @@
   border-radius: 10px;
 }
 
+.red {
+  color: red;
+}
+
 .card-input {
   color: white;
   background: rgb(101, 101, 101);
