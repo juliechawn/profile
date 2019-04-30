@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import appSyncConfig from "./aws-exports";
 import { ApolloProvider } from "react-apollo";
-import AWSAppSyncClient, { defaultDataIdFromObject } from "aws-appsync";
+import AWSAppSyncClient from "aws-appsync";
 import { Rehydrated } from "aws-appsync-react";
 
 import "./Got.css";
@@ -26,23 +26,6 @@ const client = new AWSAppSyncClient({
     type: appSyncConfig.aws_appsync_authenticationType,
     apiKey: appSyncConfig.aws_appsync_apiKey,
   },
-  cacheOptions: {
-    dataIdFromObject: (obj) => {
-      let id = defaultDataIdFromObject(obj);
-
-      // if (!id) {
-      //   const { __typename: typename } = obj;
-      //   switch (typename) {
-      //     case 'Comment':
-      //       return `${typename}:${obj.commentId}`;
-      //     default:
-      //       return id;
-      //   }
-      // }
-
-      return id;
-    }
-  }
 });
 
 const WithProvider = () => (

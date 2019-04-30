@@ -3,8 +3,7 @@ import Synonym from './Synonym';
 import trex from '../images/trex.gif';
 
 import axios from 'axios';
-
-const API_WORD =`${process.env.REACT_APP_WORD_KEY}`
+ const API_WEB =`${process.env.REACT_APP_AWS_WEB}`
 
 class Text extends React.Component {
   constructor() {
@@ -28,7 +27,7 @@ class Text extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const url = "https://words.bighugelabs.com/api/2/ae20e1ed4d471a357983df53d1e40ad2/" + this.state.word + "/json";
+    const url = "https://words.bighugelabs.com/api/2//" + this.state.word + "/json";
 
     axios.get(url)
       .then((response) => {

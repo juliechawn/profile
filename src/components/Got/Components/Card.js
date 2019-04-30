@@ -1,6 +1,11 @@
 import React, { Component } from "react";
+import { graphql } from "react-apollo";
+import MutationDeleteCharacter from "../GraphQL/MutationDeleteCharacter";
 
+import axios from "axios";
 import "./card.css";
+import QueryAllCharacters from "../GraphQL/QueryAllCharacters";
+
 
 class Card extends Component {
   constructor(props) {
@@ -9,6 +14,23 @@ class Card extends Component {
 
     this.renderFront = this.renderFront.bind(this);
     this.renderBack = this.renderBack.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
+  }
+
+  handleDelete(e) {
+    e.preventDefault();
+    const card = this.props;
+    const img = this.props.image;
+    const { deleteCharacter } = this.props;
+
+    deleteCharacter(card);
+
+    axios
+      .delete(img)
+      .then(response => {
+      })
+      .catch(error => {
+      });
   }
 
   getHouseF() {
@@ -21,6 +43,20 @@ class Card extends Component {
         return "lannister-f";
       case "Greyjoy":
         return "greyjoy-f";
+      case "Tyrell":
+        return "tyrell-f";
+        case "Martell":
+        return "martell-f";
+        case "Free-Folk":
+        return "freefolk-f";
+        case "Nights-watch":
+        return "nightswatch-f";
+        case "Tully":
+        return "tully-f";
+        case "Frey":
+        return "frey-f";
+        case "Bolton":
+        return "bolton-f";
       default:
     }
   }
@@ -33,8 +69,22 @@ class Card extends Component {
         return "targaryen-b";
       case "Lannister":
         return "lannister-b";
-        case "Greyjoy":
+      case "Greyjoy":
         return "greyjoy-b";
+        case "Tyrell":
+        return "tyrell-b";
+        case "Martell":
+        return "martell-b";
+        case "Free-Folk":
+        return "freefolk-b";
+        case "Nights-watch":
+        return "nightswatch-b";
+        case "Tully":
+        return "tully-b";
+        case "Frey":
+        return "frey-b";
+        case "Bolton":
+        return "bolton-b";
       default:
     }
   }
@@ -61,9 +111,14 @@ class Card extends Component {
         onClick={() => this.setState({ toggle: !this.state.toggle })}
       >
         <div className="char-title">
-          <div className="title">{this.props.name} <span className="spouse-status">{this.props.status}</span></div>
-         
-          <div className="nickname"><strong>{this.props.nickname}</strong></div>
+          <div className="title">
+            {this.props.name}{" "}
+            <span className="spouse-status">{this.props.status}</span>
+          </div>
+
+          <div className="nickname">
+            <strong>{this.props.nickname}</strong>
+          </div>
         </div>
         <div className="char-bio">
           <table className="bio-table">
@@ -114,10 +169,40 @@ class Card extends Component {
   }
 
   render() {
+    let newcard;
+    if (this.props.delete === true) {
+      newcard = (
+        <span className="card-button-delete" onClick={this.handleDelete}>
+          CLICK TO DELETE
+        </span>
+      );
+    }
     return (
-      <div>{this.state.toggle ? this.renderFront() : this.renderBack()}</div>
+      <div>
+        {this.state.toggle ? this.renderFront() : this.renderBack()}
+        {newcard}
+      </div>
     );
   }
 }
 
-export default Card;
+export default graphql(MutationDeleteCharacter,  {
+  options: {
+    update: (proxy, { data: { deleteCharacter} }) => {
+        const query = QueryAllCharacters;
+        const data = proxy.readQuery({ query });
+        data.listCharacters.items = data.listCharacters.items.filter(card => card.id !== deleteCharacter.id);
+        proxy.writeQuery({ query, data });
+    }
+},
+  props: props => ({
+    deleteCharacter: card => {
+      props.mutate({
+        variables: { id: card.id },
+        optimisticResponse: {
+          deleteCharacter: { ...card, __typename: "Character" },
+        }
+      });
+    }
+  })
+})(Card);

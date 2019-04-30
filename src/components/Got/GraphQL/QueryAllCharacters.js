@@ -20,6 +20,7 @@ query {
       quote
       nickname
       allegiance
+      delete
     }
   }
 }`);
