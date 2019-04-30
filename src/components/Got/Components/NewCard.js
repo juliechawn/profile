@@ -6,6 +6,11 @@ import QueryAllCharacters from "../GraphQL/QueryAllCharacters";
 import { v4 as uuid } from "uuid";
 import aws from "aws-sdk";
 
+
+// const AWS_ACCESS_KEY_ID = `${process.env.S3_KEY}`
+// const S3_BUCKET =`${process.env.S3_KEY}`
+// const S3_SECRET = `${process.env.S3_SECRET}`
+
 class NewCard extends Component {
   constructor() {
     super();
@@ -48,6 +53,8 @@ class NewCard extends Component {
       credentials: {
         region: 'us-east-2',
         signatureVersion: 'v4',
+        accessKeyId:  process.env.S3_KEY,
+        secretAccessKey: process.env.S3_SECRET
       }
     });
     s3.putObject(params, (err, signedUrl) => {
