@@ -8,7 +8,7 @@ import aws from "aws-sdk";
 
 
 const AWS_ACCESS_KEY_ID = `${process.env.AWS_ACCESS_KEY_ID}`
-const S3_BUCKET =`${process.env.S3_KEY}`
+// const S3_BUCKET =`${process.env.S3_KEY}`
 const AWS_SECRET_ACCESS_KEY = `${process.env.AWS_SECRET_ACCESS_KEY}`
 
 class NewCard extends Component {
@@ -41,7 +41,7 @@ class NewCard extends Component {
   handleFile(e) {
     let file = e.target.files[0];
     var params = {
-      Bucket: S3_BUCKET,
+      Bucket: 'got-20181210143420-deployment',
       Key: file.name,
       Body: file,
       Expires: 60,
