@@ -36,7 +36,7 @@ class NewCard extends Component {
   handleFile(e) {
     let file = e.target.files[0];
     var params = {
-      Bucket: "got-20181210143420-deployment",
+      Bucket: S3_BUCKET,
       Key: file.name,
       Body: file,
       Expires: 60,
@@ -46,8 +46,8 @@ class NewCard extends Component {
 
     const s3 = new aws.S3({
       credentials: {
-        accessKeyId: "AKIAJIBKWLIPSAMZD2KA",
-        secretAccessKey: "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"
+        accessKeyId: AWS_ACCESS_KEY_ID,
+        secretAccessKey: AWS_SECRET_ACCESS_KEY
       }
     });
     s3.putObject(params, (err, signedUrl) => {
