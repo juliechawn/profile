@@ -41,7 +41,7 @@ class NewCard extends Component {
   handleFile(e) {
     let file = e.target.files[0];
     var params = {
-      Bucket: "got-20181210143420-deployment",
+      Bucket: S3_BUCKET,
       Key: file.name,
       Body: file,
       Expires: 60,
