@@ -24,7 +24,6 @@ class Card extends Component {
     const { deleteCharacter } = this.props;
 
     deleteCharacter(card);
-
     axios
       .delete(img)
       .then(response => {

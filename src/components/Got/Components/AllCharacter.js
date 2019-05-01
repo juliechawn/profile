@@ -8,10 +8,10 @@ import { graphql, compose, withApollo } from "react-apollo";
 import QueryAllCharacters from "../GraphQL/QueryAllCharacters";
 
 class AllCharacters extends Component {
-
   render() {
     let cards = this.props.cards.sort((a,b) => b.delete - a.delete);
     cards = this.props.cards.map((card, i) => {
+      console.log(card)
       return(
       <Card 
       key={i}
@@ -56,8 +56,8 @@ export default withApollo(
       options: {
         fetchPolicy: "cache-and-network"
       },
-      props: ({ data: { listCharacters = { items: [] } } }) => ({
-        cards: listCharacters.items
+      props: ({ data: { listCharacterTables = { items: [] } } }) => ({
+        cards: listCharacterTables.items
       })   
     })
   )(AllCharacters)
