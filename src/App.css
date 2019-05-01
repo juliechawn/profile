@@ -186,7 +186,7 @@ body {
     flex-direction: column;
     text-align: center;
     flex-wrap: nowrap;
-    /* margin: 25px 0; */
+    margin: 25px 0;
     padding: 10px;
   }
 
