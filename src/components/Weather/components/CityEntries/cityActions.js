@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const WEATHER_KEY = REACT_APP_WEATHER_KEY
-const IMG_KEY = env.REACT_APP_IMG_KEY
+const WEATHER_KEY = process.env.REACT_APP_WEATHER_KEY
+const IMG_KEY = process.env.REACT_APP_IMG_KEY
 
 export function updateCity(name) {
   return {

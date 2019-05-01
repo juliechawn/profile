@@ -3,7 +3,7 @@ import Synonym from './Synonym';
 import trex from '../images/trex.gif';
 
 import axios from 'axios';
-const API_WEB = REACT_APP_AWS_WEB
+const API_WEB = process.env.REACT_APP_AWS_WEB
 
 class Text extends React.Component {
   constructor() {
