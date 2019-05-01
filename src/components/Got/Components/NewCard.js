@@ -151,7 +151,7 @@ class NewCard extends Component {
     return (
       <form className="new-card">
               <p className="got-subheader">Make your own card!</p>
-              <p className="got-subsubheader">Don't worry - you will be able to delete it from APPSYNC and S3 database</p>
+              <p className="got-subsubheader">Don't worry - you will be able to delete it from APPSYNC and S3</p>
         <div className="new-card-inputs">
           <div className="card-fields">
             <span>PREVIEW</span>
