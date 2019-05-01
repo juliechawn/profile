@@ -70,6 +70,19 @@ class NewCard extends Component {
 
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
+    if (this.state.TextInputName != '') {
+      //Check for the Name TextInput
+      if (this.state.TextInputEmail != '') {
+        //Check for the Email TextInput
+        alert('Success')
+      } else {
+        alert('Please Enter Email');
+      }
+    } else {
+      alert('Please Enter Name');
+    }
+
+  
   }
 
   handleSubmit(e) {

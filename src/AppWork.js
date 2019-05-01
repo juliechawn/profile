@@ -25,6 +25,7 @@ class AppWork extends React.Component {
           React and using flexbox and media queries to create a responsive
           design. The CMS and API are developed with Strapi, MongoDB, and
           GraphQL.
+          <p>
           <a
             href="https://github.com/juliechawn/LRsite"
             rel="noopener noreferrer"
@@ -32,6 +33,7 @@ class AppWork extends React.Component {
           >
             https://github.com/juliechawn/LRsite
           </a>
+          </p>
           <p className="section-anchor">
             <a
               className="anchor"

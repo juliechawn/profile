@@ -8,3 +8,9 @@
     overflow-x:hidden;
   }
   
+
+@media (min-width: 320px) and (max-width: 600px),
+(min-width: 600px) and (max-width: 999px) {
+
+  
+}
