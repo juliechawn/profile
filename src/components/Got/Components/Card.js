@@ -21,9 +21,9 @@ class Card extends Component {
     e.preventDefault();
     const card = this.props;
     const img = this.props.image;
-    const { deleteCharacter } = this.props;
+    const { deleteCharacterTable } = this.props;
 
-    deleteCharacter(card);
+    deleteCharacterTable(card);
     axios
       .delete(img)
       .then(response => {
@@ -187,19 +187,19 @@ class Card extends Component {
 
 export default graphql(MutationDeleteCharacter,  {
   options: {
-    update: (proxy, { data: { deleteCharacter} }) => {
+    update: (proxy, { data: { deleteCharacterTable } }) => {
         const query = QueryAllCharacters;
         const data = proxy.readQuery({ query });
-        data.listCharacters.items = data.listCharacters.items.filter(card => card.id !== deleteCharacter.id);
+        data.listCharacterTables.items = data.listCharacterTables.items.filter(card => card.id !== deleteCharacterTable.id);
         proxy.writeQuery({ query, data });
     }
 },
   props: props => ({
-    deleteCharacter: card => {
+    deleteCharacterTable: card => {
       props.mutate({
         variables: { id: card.id },
         optimisticResponse: {
-          deleteCharacter: { ...card, __typename: "Character" },
+          deleteCharacterTable: { ...card, __typename: "Character" },
         }
       });
     }

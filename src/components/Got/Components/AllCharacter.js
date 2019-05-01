@@ -38,7 +38,7 @@ class AllCharacters extends Component {
       <div>
         <header className="got-header">
           <p>GAME OF THRONES PLAYING CARDS</p>
-          <p className="got-subheader">Click on a card to see the back!</p>
+          <p className="got-subsubheader">(Click on a card to see the back!)</p>
         </header>
         <NewCard />
         <div className="card-container">

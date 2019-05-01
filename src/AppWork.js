@@ -24,7 +24,7 @@ class AppWork extends React.Component {
           I was commissioned to create a lifestyle web app. I am building with
           React and using flexbox and media queries to create a responsive
           design. The CMS and API are developed with Strapi, MongoDB, and
-          GraphQL.{" "}
+          GraphQL.
           <a
             href="https://github.com/juliechawn/LRsite"
             rel="noopener noreferrer"
@@ -48,7 +48,7 @@ class AppWork extends React.Component {
           <p>A few fun projects</p>
         </div>
         <p className="section-header-text">
-          A handful of projects I've created to learn and refine my skills
+          A handful of projects I've created to learn and refine my skills.
         </p>
         <div id="work-portfolio">
           <div className="work-portfolio-div got">

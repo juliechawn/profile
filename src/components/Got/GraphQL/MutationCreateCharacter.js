@@ -1,8 +1,8 @@
 import gql from "graphql-tag";
 
 export default gql(`
-mutation createCharacter( $image: String, $name: String, $house: String, $actor: String, $status: String, $weapon: String, $pet: String, $spouse: String, $spousestatus: String, $age: String, $birthplace: String, $bestfriend: String, $quote: String, $nickname: String, $allegiance: String, $delete: Boolean) {
-  createCharacter( input: {
+mutation createCharacterTable( $image: String, $name: String, $house: String, $actor: String, $status: String, $weapon: String, $pet: String, $spouse: String, $spousestatus: String, $age: String, $birthplace: String, $bestfriend: String, $quote: String, $nickname: String, $allegiance: String, $delete: Boolean) {
+  createCharacterTable( input: {
     image: $image,
     name: $name,
     house: $house,

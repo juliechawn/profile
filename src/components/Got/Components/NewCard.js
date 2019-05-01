@@ -52,7 +52,6 @@ class NewCard extends Component {
         secretAccessKey: myCredentials.S3_SECRET
       }
     });
-    console.log(myCredentials)
     s3.putObject(params, (err, signedUrl) => {
       if (signedUrl) {
         this.setState({
@@ -61,7 +60,6 @@ class NewCard extends Component {
             file.name
         });
       } else {
-        console.log(err)
         this.setState({
           image: "",
           error: true
@@ -77,22 +75,22 @@ class NewCard extends Component {
   handleSubmit(e) {
     e.preventDefault();
     const {
-      name,
-      image,
-      house,
-      actor,
-      status,
-      weapon,
-      pet,
-      spouse,
-      spousestatus,
-      age,
-      birthplace,
-      bestfriend,
-      quote,
-      nickname,
-      allegiance
-    } = this.state;
+        image,
+        name,
+        house,
+        actor,
+        status,
+        weapon,
+        pet,
+        spouse,
+        spousestatus,
+        age,
+        birthplace,
+        bestfriend,
+        quote,
+        nickname,
+        allegiance,
+      } = this.state;
     this.props.onAdd({
       image,
       name,
@@ -139,6 +137,8 @@ class NewCard extends Component {
     }
     return (
       <form className="new-card">
+              <p className="got-subheader">Make your own card!</p>
+              <p className="got-subsubheader">Don't worry - you will be able to delete it from APPSYNC and S3 database</p>
         <div className="new-card-inputs">
           <div className="card-fields">
             <span>PREVIEW</span>
@@ -227,7 +227,7 @@ class NewCard extends Component {
               <option value="Targaryen">Targaryen</option>
               <option value="Tully">Tully</option>
               <option value="Tyrell">Tyrell</option>
-              <option value="N/A">Tyrell</option>
+              <option value="N/A">N/A</option>
               {/* <option value="White-walker">White Walker</option> */}
             </select>
           </p>
@@ -260,7 +260,7 @@ class NewCard extends Component {
               <option value="Targaryen">Targaryen</option>
               <option value="Tully">Tully</option>
               <option value="Tyrell">Tyrell</option>
-              <option value="N/A">Tyrell</option>
+              <option value="N/A">N/A</option>
               {/* <option value="White-walker">White Walker</option> */}
             </select>
           </p>
@@ -311,6 +311,7 @@ class NewCard extends Component {
               <option>A.</option>
               <option>FMR.</option>
               <option>D.</option>
+              <option>N/A</option>
             </select>
           </p>
           <p className="card-fields">
@@ -379,24 +380,25 @@ export default graphql(MutationCreateCharacter, {
     onAdd: card => {
       props
         .mutate({
-          update: (proxy, { data: { createCharacter } }) => {
+          update: (proxy, { data: { createCharacterTable } }) => {
+            console.log(createCharacterTable)
             const query = QueryAllCharacters;
             const data = proxy.readQuery({ query });
-
-            data.listCharacters.items = [
-              ...data.listCharacters.items.filter(
-                e => e.id !== createCharacter.id
+            data.listCharacterTables.items = [
+              ...data.listCharacterTables.items.filter(
+                e => e.id !== createCharacterTable.id
               ),
-              createCharacter
+              createCharacterTable
             ];
             proxy.writeQuery({ query, data });
           },
           variables: card,
           optimisticResponse: {
-            createCharacter: { ...card, __typename: "Character", id: uuid() }
+            createCharacterTable: { ...card, __typename: "Character", id: uuid() }
           }
         })
         .catch(err => {
+          console.log(err)
           alert("complete all fields");
         });
     }
