@@ -11,7 +11,6 @@ class AllCharacters extends Component {
   render() {
     let cards = this.props.cards.sort((a,b) => b.delete - a.delete);
     cards = this.props.cards.map((card, i) => {
-      console.log(card)
       return(
       <Card 
       key={i}
@@ -41,7 +40,7 @@ class AllCharacters extends Component {
           <p>GAME OF THRONES PLAYING CARDS</p>
           <p className="got-subheader">Click on a card to see the back!</p>
         </header>
-        {/* <NewCard /> */}
+        <NewCard />
         <div className="card-container">
            {cards}
         </div>

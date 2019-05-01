@@ -5,6 +5,7 @@ import MutationCreateCharacter from "../GraphQL/MutationCreateCharacter";
 import QueryAllCharacters from "../GraphQL/QueryAllCharacters";
 import { v4 as uuid } from "uuid";
 import aws from "aws-sdk";
+import myCredentials from "../aws-config"
 
 class NewCard extends Component {
   constructor() {
@@ -36,7 +37,7 @@ class NewCard extends Component {
   handleFile(e) {
     let file = e.target.files[0];
     var params = {
-      Bucket: 'got-20181210143420-deployment',
+      Bucket: myCredentials.S3_BUCKET,
       Key: file.name,
       Body: file,
       Expires: 60,
@@ -46,12 +47,13 @@ class NewCard extends Component {
 
     const s3 = new aws.S3({
       credentials: {
-        accessKeyId: process.env.S3_KEY,
-        secretAccessKey: process.env.S3_SECRET
+        region: myCredentials.AWS_REGION,
+        accessKeyId: myCredentials.S3_KEY,
+        secretAccessKey: myCredentials.S3_SECRET
       }
     });
+    console.log(myCredentials)
     s3.putObject(params, (err, signedUrl) => {
-      console.log(s3.putObject())
       if (signedUrl) {
         this.setState({
           image:
