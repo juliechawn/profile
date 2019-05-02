@@ -27,7 +27,7 @@ class NewCard extends Component {
       quote: "",
       nickname: "",
       allegiance: "",
-      delete: false
+      delete: true
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -68,19 +68,10 @@ class NewCard extends Component {
     });
   }
 
+
+
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
-    // if (this.state.TextInputName != '') {
-    //   //Check for the Name TextInput
-    //   if (this.state.TextInputEmail != '') {
-    //     //Check for the Email TextInput
-    //     alert('Success')
-    //   } else {
-    //     alert('Please Enter Email');
-    //   }
-    // } else {
-    //   alert('Please Enter Name');
-    // }
   }
 
   handleSubmit(e) {
@@ -137,7 +128,7 @@ class NewCard extends Component {
       quote: "",
       nickname: "",
       allegiance: "",
-      delete: false
+      delete: true
     });
   }
 
@@ -174,7 +165,7 @@ class NewCard extends Component {
           <p className="card-fields">
             <span>NAME</span>
             <input
-              required="required"
+              id="card_input"
               name="name"
               placeholder=""
               value={this.state.name}
@@ -186,7 +177,7 @@ class NewCard extends Component {
           <p className="card-fields">
             <span>TITLE / NICKNAME</span>
             <input
-              required
+              type="text"
               placeholder=""
               value={this.state.nickname}
               name="nickname"
@@ -238,7 +229,7 @@ class NewCard extends Component {
               <option value="Targaryen">Targaryen</option>
               <option value="Tully">Tully</option>
               <option value="Tyrell">Tyrell</option>
-              <option value="N/A">N/A</option>
+              <option value="N/A">No Affiliation</option>
               {/* <option value="White-walker">White Walker</option> */}
             </select>
           </p>
@@ -271,7 +262,7 @@ class NewCard extends Component {
               <option value="Targaryen">Targaryen</option>
               <option value="Tully">Tully</option>
               <option value="Tyrell">Tyrell</option>
-              <option value="N/A">N/A</option>
+              <option value="N/A">No Affiliation</option>
               {/* <option value="White-walker">White Walker</option> */}
             </select>
           </p>
@@ -373,9 +364,11 @@ class NewCard extends Component {
         <div>
           <p className="card-fields">
             <button
+              disabled={this.state.quote === "" || this.state.bestfriend === "" || this.state.birthplace === "" || this.state.age === "" || this.state.spousestatus === ""|| this.state.spouse === "" || this.state.pet === "" || this.state.pet === "" || this.state.weapon === "" || this.state.status === "" || this.state.actor === "" || this.state.house === "" || this.state.allegiance === "" || this.state.name === "" || this.state.nickname === "" || this.state.image === ""}
               className="card-button"
               type="Submit"
               onClick={this.handleSubmit}
+             
             >
               MAKE MY CARD!
             </button>

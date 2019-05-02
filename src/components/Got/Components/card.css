@@ -367,6 +367,18 @@ td {
   border-left: solid black 10px;
 }
 
+.na-b {
+  background: url("./images/GOT.png") 100% 35%  no-repeat,
+  linear-gradient(silver 75%, black 25%);
+  background-size: contain;
+}
+
+.na-f {
+  background: silver ;
+  border-top: solid black 10px;
+  border-left: solid black 10px;
+}
+
 input[type="file"] {
   display: none;
 }
