@@ -249,12 +249,12 @@ this.setState({
               {/* <option value="Brotherhood-without-Banners">
                 Brotherhood Without Banners
               </option> */}
-              <option value="Free-Folk">Free Folk</option>
+              <option value="Free Folk">Free Folk</option>
               <option value="Frey">Frey</option>
               <option value="Greyjoy">Greyjoy</option>
               <option value="Lannister">Lannister</option>
               <option value="Martell">Martell</option>
-              <option value="Nights-watch">Night's Watch</option>
+              <option value="Nights Watch">Night's Watch</option>
               <option value="Stark">Stark</option>
               <option value="Targaryen">Targaryen</option>
               <option value="Tully">Tully</option>
@@ -282,12 +282,12 @@ this.setState({
                 Brotherhood Without Banners
               </option> */}
               <option value="Bolton">Bolton</option>
-              <option value="Free-Folk">Free Folk</option>
+              <option value="Free Folk">Free Folk</option>
               <option value="Frey">Frey</option>
               <option value="Greyjoy">Greyjoy</option>
               <option value="Lannister">Lannister</option>
               <option value="Martell">Martell</option>
-              <option value="Nights-watch">Night's Watch</option>
+              <option value="Nights Watch">Night's Watch</option>
               <option value="Stark">Stark</option>
               <option value="Targaryen">Targaryen</option>
               <option value="Tully">Tully</option>

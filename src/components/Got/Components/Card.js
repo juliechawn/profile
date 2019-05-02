@@ -46,9 +46,9 @@ class Card extends Component {
         return "tyrell-f";
         case "Martell":
         return "martell-f";
-        case "Free-Folk":
+        case "Free Folk":
         return "freefolk-f";
-        case "Nights-watch":
+        case "Nights Watch":
         return "nightswatch-f";
         case "Tully":
         return "tully-f";
@@ -76,9 +76,9 @@ class Card extends Component {
         return "tyrell-b";
         case "Martell":
         return "martell-b";
-        case "Free-Folk":
+        case "Free Folk":
         return "freefolk-b";
-        case "Nights-watch":
+        case "Nights Watch":
         return "nightswatch-b";
         case "Tully":
         return "tully-b";
