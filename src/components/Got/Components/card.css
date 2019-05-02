@@ -1,3 +1,16 @@
+
+  .new-card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: white;
+    font-size: 12px;
+    margin: 0 auto;
+    width: 100%;
+    border: 1px solid white;
+    padding: 10px;
+  }
+
 .got-header {
   font-family: "Cinzel", serif;
   font-size: 36px;
@@ -10,18 +23,6 @@
 
 .got-subheader {
   font-size: 24px;
-}
-
-.new-card {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  color: white;
-  font-size: 12px;
-  margin: 0 auto;
-  width: 90%;
-  border: 1px solid white;
-  padding: 25px;
 }
 
 .new-card-inputs {
@@ -109,7 +110,7 @@
   color: rgb(101, 101, 101)!important;
   background: white;
   border-radius: 10px;
-  height: 30px;
+  height: 40px;
   width: 40%;
   font-size: 12px;
 }

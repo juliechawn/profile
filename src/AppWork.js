@@ -68,7 +68,6 @@ class AppWork extends React.Component {
                 JavaScript • React • Node.js • GraphQL • AWS • CSS
               </p>
               <p>
-                {" "}
                 <a
                   href="https://github.com/juliechawn/gotCards"
                   rel="noopener noreferrer"

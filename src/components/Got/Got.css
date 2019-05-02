@@ -1,9 +1,37 @@
-.got-container {
-    font-family: 'Cinzel', serif;
-    text-align: center;
-    background-color: #444b57;
-    padding: 50px;
-    height: 1000px;
-    overflow:scroll;
-    overflow-x:hidden;
+
+  @media (min-width: 320px) and (max-width: 600px),
+  (min-width: 600px) and (max-width: 999px) {
+    .got-container {
+      font-family: 'Cinzel', serif;
+      text-align: center;
+      background-color: #444b57;
+      padding: 10px;
+      height: 1000px;
+      overflow:scroll;
+      overflow-x:hidden;
+    }
+  }
+
+  @media (min-width: 1000px) and (max-width: 1199px) {
+    .got-container {
+      font-family: 'Cinzel', serif;
+      text-align: center;
+      background-color: #444b57;
+      padding: 25px;
+      height: 1000px;
+      overflow:scroll;
+      overflow-x:hidden;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .got-container {
+      font-family: 'Cinzel', serif;
+      text-align: center;
+      background-color: #444b57;
+      padding: 50px;
+      height: 1000px;
+      overflow:scroll;
+      overflow-x:hidden;
+    }
   }
