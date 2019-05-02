@@ -364,11 +364,10 @@ class NewCard extends Component {
         <div>
           <p className="card-fields">
             <button
-              disabled={this.state.quote === "" || this.state.bestfriend === "" || this.state.birthplace === "" || this.state.age === "" || this.state.spousestatus === ""|| this.state.spouse === "" || this.state.pet === "" || this.state.pet === "" || this.state.weapon === "" || this.state.status === "" || this.state.actor === "" || this.state.house === "" || this.state.allegiance === "" || this.state.name === "" || this.state.nickname === "" || this.state.image === ""}
+              disabled={!this.state.quote || this.state.bestfriend === "" || this.state.birthplace === "" || this.state.age === "" || this.state.spousestatus === ""|| this.state.spouse === "" || this.state.pet === "" || this.state.pet === "" || this.state.weapon === "" || this.state.status === "" || this.state.actor === "" || this.state.house === "" || this.state.allegiance === "" || this.state.name === "" || this.state.nickname === "" || this.state.image === ""}
               className="card-button"
               type="Submit"
               onClick={this.handleSubmit}
-             
             >
               MAKE MY CARD!
             </button>
