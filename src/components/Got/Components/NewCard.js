@@ -384,7 +384,6 @@ export default graphql(MutationCreateCharacter, {
       props
         .mutate({
           update: (proxy, { data: { createCharacterTable } }) => {
-            console.log(createCharacterTable)
             const query = QueryAllCharacters;
             const data = proxy.readQuery({ query });
             data.listCharacterTables.items = [
@@ -401,7 +400,6 @@ export default graphql(MutationCreateCharacter, {
           }
         })
         .catch(err => {
-          console.log(err)
           alert("complete all fields");
         });
     }
