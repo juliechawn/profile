@@ -259,7 +259,7 @@ this.setState({
               <option value="Targaryen">Targaryen</option>
               <option value="Tully">Tully</option>
               <option value="Tyrell">Tyrell</option>
-              <option value="N/A">No Affiliation</option>
+              <option value="No Affiliation">No Affiliation</option>
               {/* <option value="White-walker">White Walker</option> */}
             </select>
           </p>
@@ -292,7 +292,7 @@ this.setState({
               <option value="Targaryen">Targaryen</option>
               <option value="Tully">Tully</option>
               <option value="Tyrell">Tyrell</option>
-              <option value="N/A">No Affiliation</option>
+              <option value="No Affiliation">No Affiliation</option>
               {/* <option value="White-walker">White Walker</option> */}
             </select>
           </p>

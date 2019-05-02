@@ -56,7 +56,7 @@ class Card extends Component {
         return "frey-f";
         case "Bolton":
         return "bolton-f";
-        case "N/A":
+        case "No Affiliation":
         return "na-f";
       default:
     }
@@ -86,7 +86,7 @@ class Card extends Component {
         return "frey-b";
         case "Bolton":
         return "bolton-b";
-        case "N/A":
+        case "No Affiliation":
         return "na-b";
       default:
     }
