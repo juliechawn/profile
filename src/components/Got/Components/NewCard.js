@@ -74,30 +74,10 @@ class NewCard extends Component {
     this.setState({ [e.target.name]: e.target.value });
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
-    const {
-        image,
-        name,
-        house,
-        actor,
-        status,
-        weapon,
-        pet,
-        spouse,
-        spousestatus,
-        age,
-        birthplace,
-        bestfriend,
-        quote,
-        nickname,
-        allegiance,
-      } = this.state;
-    this.props.onAdd({
-      image,
+  canBeSubmitted() {
+    const { image,
       name,
       house,
-      actor,
       status,
       weapon,
       pet,
@@ -108,28 +88,69 @@ class NewCard extends Component {
       bestfriend,
       quote,
       nickname,
-      allegiance,
-      delete: true
-    });
-    this.setState({
-      error: false,
-      image: "",
-      name: "",
-      house: "",
-      actor: "n/a",
-      status: "",
-      weapon: "",
-      pet: "",
-      spouse: "",
-      spousestatus: "",
-      age: "",
-      birthplace: "",
-      bestfriend: "",
-      quote: "",
-      nickname: "",
-      allegiance: "",
-      delete: true
-    });
+      allegiance, } = this.state;
+      return image.length > 0 && allegiance.length > 0 && nickname.length > 0 && quote.length > 0 && bestfriend.length > 0 && birthplace.length > 0 && name.length > 0 && house.length > 0 && status.length > 0 && weapon.length > 0 && pet.length && spouse.length && spousestatus.length && age.length;
+  }
+
+  handleSubmit(e) {
+  if(!this.canBeSubmitted()) {
+    alert('empy')
+  } else { e.preventDefault();
+  const {
+    image,
+    name,
+    house,
+    actor,
+    status,
+    weapon,
+    pet,
+    spouse,
+    spousestatus,
+    age,
+    birthplace,
+    bestfriend,
+    quote,
+    nickname,
+    allegiance,
+  } = this.state;
+this.props.onAdd({
+  image,
+  name,
+  house,
+  actor,
+  status,
+  weapon,
+  pet,
+  spouse,
+  spousestatus,
+  age,
+  birthplace,
+  bestfriend,
+  quote,
+  nickname,
+  allegiance,
+  delete: true
+});
+this.setState({
+  error: false,
+  image: "",
+  name: "",
+  house: "",
+  actor: "n/a",
+  status: "",
+  weapon: "",
+  pet: "",
+  spouse: "",
+  spousestatus: "",
+  age: "",
+  birthplace: "",
+  bestfriend: "",
+  quote: "",
+  nickname: "",
+  allegiance: "",
+  delete: true
+});   
+  }
   }
 
   render() {
@@ -137,8 +158,17 @@ class NewCard extends Component {
     if (this.state.error === true) {
       error = <div className="red">Photo did not upload. Try again!</div>;
     }
+    const isEnabled = this.canBeSubmitted();
+    let enabled;
+    let disabled;
+    if (isEnabled) {
+      enabled = <div>Make My Card!</div>
+    } else {
+      disabled = <div className="red">COMPLETE ALL FIELDS</div>
+    }
     return (
-      <form className="new-card">
+      <form className="new-card" onSubmit={this.handleSubmit}
+      >
               <p className="got-subheader">Make your own card!</p>
               <p className="got-subsubheader">Don't worry - you will be able to delete it from APPSYNC and S3</p>
         <div className="new-card-inputs">
@@ -364,12 +394,12 @@ class NewCard extends Component {
         <div>
           <p className="card-fields">
             <button
-              disabled={!this.state.quote || this.state.bestfriend === "" || this.state.birthplace === "" || this.state.age === "" || this.state.spousestatus === ""|| this.state.spouse === "" || this.state.pet === "" || this.state.pet === "" || this.state.weapon === "" || this.state.status === "" || this.state.actor === "" || this.state.house === "" || this.state.allegiance === "" || this.state.name === "" || this.state.nickname === "" || this.state.image === ""}
+              disabled={!isEnabled}
               className="card-button"
-              type="Submit"
-              onClick={this.handleSubmit}
+              type="Submit"             
             >
-              MAKE MY CARD!
+             {enabled}
+             {disabled}
             </button>
           </p>
         </div>
@@ -400,6 +430,7 @@ export default graphql(MutationCreateCharacter, {
           }
         })
         .catch(err => {
+          console.log(err)
           alert("complete all fields");
         });
     }
