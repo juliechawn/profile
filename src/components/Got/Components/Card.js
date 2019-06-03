@@ -152,7 +152,7 @@ class Card extends Component {
             <tbody>
               <tr>
                 <td>
-                  {this.props.spouse}{" "}
+                  {this.props.spouse}
                   <span className="spouse-status">
                     {this.props.spousestatus}
                   </span>

@@ -94,7 +94,6 @@ class NewCard extends Component {
 
   handleSubmit(e) {
   if(!this.canBeSubmitted()) {
-    alert('empy')
   } else { e.preventDefault();
   const {
     image,

@@ -1,6 +1,7 @@
 import React from "react";
 
 function formatDate(date) {
+  
   var monthNames = [
     "Jan",
     "Feb",

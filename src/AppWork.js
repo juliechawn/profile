@@ -25,15 +25,6 @@ class AppWork extends React.Component {
           React and using flexbox and media queries to create a responsive
           design. The CMS and API are developed with Strapi, MongoDB, and
           GraphQL.
-          <p>
-          <a
-            href="https://github.com/juliechawn/LRsite"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            https://github.com/juliechawn/LRsite
-          </a>
-          </p>
           <p className="section-anchor">
             <a
               className="anchor"
@@ -44,6 +35,15 @@ class AppWork extends React.Component {
               <span>VISIT SITE</span>
               <img className="arrow-visit" src={arrow} alt="arrow" />
             </a>
+          </p>
+          <p>
+          <a
+            href="https://github.com/juliechawn/LRsite"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            https://github.com/juliechawn/LRsite
+          </a>
           </p>
         </div>
         <div className="section-header">
@@ -65,7 +65,7 @@ class AppWork extends React.Component {
                 Stats of your favorite (or least favorite) characters
               </p>
               <p className="work-p">
-                JavaScript • React • Node.js • GraphQL • AWS • CSS
+                JavaScript • React • Node.js • GraphQL • AWS • CSS • HTML
               </p>
               <p>
                 <a
@@ -92,7 +92,7 @@ class AppWork extends React.Component {
                 A friendly dinosaur with a big vocabulary
               </p>
               <p className="work-p">
-                JavaScript • React • Node.js • CSS • BootStrap
+                JavaScript • React • Node.js • CSS • BootStrap • HTML
               </p>
               <p>
                 Thesaurus-Rex started as a Hackathon and then it took on a life
@@ -112,7 +112,7 @@ class AppWork extends React.Component {
                 Check the weather around the globe
               </p>
               <p className="work-p">
-                JavaScript • React/Redux • Node.js • CSS • BootStrap
+                JavaScript • React/Redux • Node.js • CSS • BootStrap • HTML
               </p>
               <p>
                 The Weather App is a BootStrap design, which is great way to
@@ -130,7 +130,7 @@ class AppWork extends React.Component {
               <p className="work-title">Very Simple To Do App</p>
               <p className="work-subtitle">Track all the things</p>
               <p className="work-p">
-                JavaScript • React • Node.js • BootStrap • CSS
+                JavaScript • React • Node.js • BootStrap • CSS • HTML
               </p>
               <p>
                 VSTDA is the first app I built with ReactJS and incorporates
