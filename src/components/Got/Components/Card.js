@@ -115,7 +115,7 @@ class Card extends Component {
       >
         <div className="char-title">
           <div className="title">
-            {this.props.name}{" "}
+            {this.props.name}
             <span className="spouse-status">{this.props.status}</span>
           </div>
 

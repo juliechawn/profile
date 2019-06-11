@@ -38,10 +38,13 @@ class AppHome extends React.Component {
                 and CSS, I loved making pictures and words change on the screen.
               </p>
               <p className="about-p">
-                I create responsive and sophisticated applications so they work
+                For two years, I have immersed myself in the world of web development through professional instruction and self-learning.  I create responsive and sophisticated applications so they work
                 seamlessly and look great. I am always working on fun projects
                 to learn new technologies and skills. Recently, I created an API
                 with AWS AppSync, S3 and GraphQL.
+              </p>
+              <p className="about-p">
+              Before I transitioned to web development, I dedicated 10 years of my career to nonprofit development and customer service. 
               </p>
               <div className="skills-div">
                 <p>
