@@ -8,7 +8,6 @@ import julie2 from "./images/julieforedit2.png";
 import arrow from "./images/arrow.png";
 import { NavLink } from "react-router-dom";
 
-
 class AppHome extends React.Component {
   render() {
     return (
@@ -20,9 +19,9 @@ class AppHome extends React.Component {
           <div className="col bio">
             <nav>
               <div className="nav-div">
-              <NavLink className="anchor" to="/work">
-                <span className="nav-name">WORK</span>
-                <img className="arrow" src={arrow} alt="arrow" />
+                <NavLink className="anchor" to="/work">
+                  <span className="nav-name">WORK</span>
+                  <img className="arrow" src={arrow} alt="arrow" />
                 </NavLink>
               </div>
             </nav>
@@ -38,13 +37,16 @@ class AppHome extends React.Component {
                 and CSS, I loved making pictures and words change on the screen.
               </p>
               <p className="about-p">
-                For two years, I have immersed myself in the world of web development through professional instruction and self-learning.  I create responsive and sophisticated applications so they work
+                For two years, I have immersed myself in the world of web
+                development through professional instruction and self-learning.
+                I create responsive and sophisticated applications so they work
                 seamlessly and look great. I am always working on fun projects
                 to learn new technologies and skills. Recently, I created an API
                 with AWS AppSync, S3 and GraphQL.
               </p>
               <p className="about-p">
-              Before I transitioned to web development, I dedicated 10 years of my career to nonprofit development and customer service. 
+                Before I transitioned to web development, I dedicated 10 years
+                of my career to nonprofit development and customer service.
               </p>
               <div className="skills-div">
                 <p>
@@ -53,7 +55,10 @@ class AppHome extends React.Component {
                 </p>
               </div>
               <div className="contact-buttons">
-                <a className="anchor" href="mailto:juliechawn@gmail.com?Subject=Hello%20">
+                <a
+                  className="anchor"
+                  href="mailto:juliechawn@gmail.com?Subject=Hello%20"
+                >
                   <img
                     className="icon"
                     src={email}
@@ -61,14 +66,16 @@ class AppHome extends React.Component {
                     alt="email"
                   />
                 </a>
-                <a className="anchor"
+                <a
+                  className="anchor"
                   href="https://www.linkedin.com/in/julie-cappa-hawn-07609435/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img className="icon" src={linkedin} alt="linkedin" />
                 </a>
-                <a className="anchor"
+                <a
+                  className="anchor"
                   href="https://github.com/juliechawn"
                   target="_blank"
                   rel="noopener noreferrer"

@@ -27,13 +27,13 @@ class AppWork extends React.Component {
           GraphQL.
           <p className="section-anchor">
             <a
-              className="anchor"
               href="https://lr-site.herokuapp.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span>VISIT SITE</span>
-              <img className="arrow-visit" src={arrow} alt="arrow" />
+              https://lr-site.herokuapp.com/
+              {/* <span>VISIT SITE</span>
+              <img className="arrow-visit" src={arrow} alt="arrow" /> */}
             </a>
           </p>
           <p>
