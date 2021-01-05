@@ -6,7 +6,7 @@
     "aws-appsync": "^1.7.2",
     "aws-appsync-react": "^1.2.6",
     "aws-sdk": "^2.441.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "dotenv": "^7.0.0",
     "file-system": "^2.2.2",
     "file-type": "^10.11.0",
